@@ -11,18 +11,18 @@ public class ChristmasTreeTest {
         //given
         ChristmasTreeImpl christmasTreeImpl = new ChristmasTreeImpl();
         //when
-        ChristmasTree tree1 = new Garland();
+        ChristmasTree tree = new Garland(christmasTreeImpl);
 
-        assertEquals(tree1.decorate(),
+        assertEquals(tree.decorate(),
                 "Christmas tree with Garland");
     }
     @Test
     public void christmasTreeWithGarlandWithGarlandWithBubbleLights(){
         //when
-        ChristmasTree tree2 = new BubbleLights(
+        ChristmasTree tree = new BubbleLights(
                 new Garland(new Garland(new ChristmasTreeImpl())));
         //then
-        assertEquals(tree2.decorate(),
+        assertEquals(tree.decorate(),
                 "Christmas tree with Garland with Garland with Bubble Lights");
     }
 }
