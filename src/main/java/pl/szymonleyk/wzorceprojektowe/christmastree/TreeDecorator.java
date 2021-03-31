@@ -1,6 +1,6 @@
 package pl.szymonleyk.wzorceprojektowe.christmastree;
 
-public class TreeDecorator implements ChristmasTree{
+public abstract class TreeDecorator implements ChristmasTree{
     ChristmasTree christmasTree;
 
     public TreeDecorator(ChristmasTree christmasTree) {
